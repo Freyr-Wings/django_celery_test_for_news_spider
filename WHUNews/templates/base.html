@@ -8,8 +8,7 @@
     <div class='WHUNews'>
         <ul class="WHUNews">
             {% for news in title_list %}
-                <li>{{ news.title }}</li>
-                <li>{{ news.content }}</li>
+                <li><a href='{{ news.id }}'>{{ news.title }}</a></li>
             {% endfor %}
         </ul>
     </div>

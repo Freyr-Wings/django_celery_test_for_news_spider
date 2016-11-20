@@ -10,10 +10,9 @@ def news_list(request):
     newsset = News.objects.all()
     return render(request, "base.html",{"title_list":newsset})
 
-def news_detail(request):
-    news = get_object_or_404(News)
+def news_detail(request, id):
+    news = get_object_or_404(News, id=id)
     context={
-        "title":news.title,
-        "content":news.content,
+        "news":news
     }
     return render(request, "news_detail.html", context)

@@ -9,5 +9,5 @@ from .views import (
 
 urlpatterns = [
     url(r'^$',news_list, name='list'),
-    url(r'^(?P<slug>[\w-]+)/$',news_detail,name='detail'),
+    url(r'^(?P<id>[\w-]+)/$',news_detail,name='detail'),
 ]
